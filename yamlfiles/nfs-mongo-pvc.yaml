@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-nfs-mongo
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: mono-storage
+  resources:
+    requests:
+      storage: 1Gi

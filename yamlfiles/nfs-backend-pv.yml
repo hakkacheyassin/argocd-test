@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: backend-nfs
+spec:
+  capacity:
+    storage: 2Gi  
+  accessModes:
+    - ReadWriteMany
+  storageClassName: nfs
+  nfs:
+    server: 128.199.2.250:/mnt/nfs_share
+    path: '/'
+    
